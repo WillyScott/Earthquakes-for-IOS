@@ -1,5 +1,6 @@
 # Earthquakes-for-IOS
 Converted to IOS from MacOS https://developer.apple.com/library/content/samplecode/Earthquakes/Introduction/Intro.html
+
 Note that on older iMacs can't run Apples original code because CoreData isn't available (only on macOS 10.12 SDK or later)
 Will be adding a update on how to convert from MacOS to IOS.
 Code was already in Swift 3.
