@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v7t-Ku-FLG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quakes Table View Controller-->
+        <scene sceneID="Yxb-Wq-ake">
+            <objects>
+                <tableViewController id="4yO-pS-ff7" customClass="QuakesTableViewController" customModule="Earthquakes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7g1-IL-FGn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="MdB-Ga-xNb">
+                            <rect key="frame" x="0.0" y="72" width="375" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="Y14-SZ-p17" customClass="TableViewCell" customModule="Earthquakes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y14-SZ-p17" id="gAR-eN-1sy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKg-io-Eyo">
+                                            <rect key="frame" x="8" y="0.0" width="60.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNm-8m-rLE">
+                                            <rect key="frame" x="8" y="22" width="34.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="magnitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNa-Sg-fVN">
+                                            <rect key="frame" x="280.5" y="22" width="81.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BKg-io-Eyo" firstAttribute="top" secondItem="gAR-eN-1sy" secondAttribute="top" id="1JG-s5-hh9"/>
+                                        <constraint firstItem="BKg-io-Eyo" firstAttribute="top" secondItem="gAR-eN-1sy" secondAttribute="top" id="3mT-DY-2sk"/>
+                                        <constraint firstItem="BKg-io-Eyo" firstAttribute="leading" secondItem="gAR-eN-1sy" secondAttribute="leading" constant="8" id="OT9-OH-MKx"/>
+                                        <constraint firstAttribute="trailing" secondItem="iNa-Sg-fVN" secondAttribute="trailing" constant="13" id="Tso-8B-cmW"/>
+                                        <constraint firstItem="BKg-io-Eyo" firstAttribute="leading" secondItem="gAR-eN-1sy" secondAttribute="leading" constant="8" id="V3A-vV-Xpo"/>
+                                        <constraint firstAttribute="bottom" secondItem="iNa-Sg-fVN" secondAttribute="bottom" constant="1" id="ntT-td-1Sb"/>
+                                        <constraint firstAttribute="bottom" secondItem="LNm-8m-rLE" secondAttribute="bottom" constant="1" id="p1E-Gh-jrR"/>
+                                        <constraint firstItem="LNm-8m-rLE" firstAttribute="leading" secondItem="BKg-io-Eyo" secondAttribute="leading" id="ydr-Ql-0Ua"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="date" destination="LNm-8m-rLE" id="0JT-cf-jjE"/>
+                                    <outlet property="location" destination="BKg-io-Eyo" id="6AO-VD-UHK"/>
+                                    <outlet property="magnitude" destination="iNa-Sg-fVN" id="uoc-fx-Mlp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4yO-pS-ff7" id="Wop-mC-lkN"/>
+                            <outlet property="delegate" destination="4yO-pS-ff7" id="oXc-Me-3Vb"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rTC-bM-3De">
+                        <barButtonItem key="rightBarButtonItem" title="Quake Import" id="xMe-2W-PtF" userLabel="Quakes Import">
+                            <connections>
+                                <action selector="fetchQuakes:" destination="4yO-pS-ff7" id="YTZ-aB-lMW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="fetchQuakesButton" destination="xMe-2W-PtF" id="ucE-Zc-Qij"/>
+                        <outlet property="progressIndicator" destination="MdB-Ga-xNb" id="YcV-tj-8wH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6e-Kt-IsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="126.38680659670166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YFx-kg-AeH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v7t-Ku-FLG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g4M-sJ-cuL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4yO-pS-ff7" kind="relationship" relationship="rootViewController" id="y2b-Vs-Fmt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxb-S7-ZIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+</document>
