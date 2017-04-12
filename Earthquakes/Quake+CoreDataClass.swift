@@ -60,11 +60,13 @@ class Quake: NSManagedObject {
 //                    NSLocalizedDescriptionKey: localizedDescription])
 //        }
         
+               
+        
         code = newCode
         magnitude = newMagnitude
         placeName = newPlaceName
         detailURL = newDetailURL
-        time = Date(timeIntervalSince1970: newTime ) as NSDate?
+        time = Date(timeIntervalSince1970: newTime/1000.0 ) as NSDate?
           longitude = coordinates[0]
         latitude = coordinates[1]
         depth = coordinates[2]
