@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Earthquakes/QuakesTableViewController.swift"
-            timestampString = "513548555.581553"
+            timestampString = "513728220.490697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "QuakesTableViewController"
             landmarkType = "3">
          </BreakpointContent>

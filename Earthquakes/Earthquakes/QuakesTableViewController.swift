@@ -38,8 +38,9 @@ class QuakesTableViewController: UITableViewController,  NSFetchedResultsControl
     
     lazy var dateFormatter:  DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+        formatter.dateFormat = "yyyy-MM-dd hh:mm:ss'Z"
+        let timeZoneZulu = TimeZone(abbreviation: "GMT")
+        formatter.timeZone = timeZoneZulu
         return formatter
     }()
     
@@ -176,8 +177,9 @@ class QuakesTableViewController: UITableViewController,  NSFetchedResultsControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        progressIndicator.isHidden = true
         title = "Quakes"
+        
         
 //        print("viewDidLoad fetchResultsController has \(fetchedResultsController.fetchedObjects?.count ?? 0)")
         
